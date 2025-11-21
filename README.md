@@ -1,4 +1,8 @@
-symfony new demoapp
+symfony new demoapp --webapp
+php bin\console make:crud
+
+
+symfony new demoapp 
 symfony serve
 
 php bin/console make:controller Product
@@ -10,7 +14,7 @@ php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 php bin/console doctrine:database:create
 
--------- SQLITE 
+-------- SQLITE
 php bin/console doctrine:schema:create
 php bin/console doctrine:migrations:migrate
 
@@ -20,6 +24,7 @@ php bin/console doctrine:migrations:migrate
  ----- packages
  composer require --dev symfony/profiler-pack
  composer require symfony/form
+ composer require symfony/validator
 
  ----------------
  php bin/console make:form
